@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bajet Apa Hari ini</title>
+  </head>
+  <body>
+    <h1>BAJET APA HARI INI</h1>
+    <div class="wrapper">
+      <div class="container">
+        <div class="sub-container">
+          <div class="total-amount-container">
+            <h3>Nilai Bajet (RM)</h3>
+            <p class="hide error" id="budget-error">Nilai tidak boleh kosong atau negatif</p>
+            <input type="number" id="total-amount" placeholder="Masukkan Jumlah Nilai Bajet" />
+            <button class="submit" id="total-amount-button">Set Bajet</button>
+          </div>
+
+          <div class="user-amount-container">
+            <h3>Belanjaan</h3>
+            <p class="hide error" id="product-title-error">Nilai tidak boleh kosong</p>
+            <input type="text" class="product-title" id="product-title" placeholder="Masukkan Nama Produk" />
+            <input type="number" id="user-amount" placeholder="Masukkan Harga Produk" />
+            <button class="submit" id="check-amount">+ Belanjaan</button>
+          </div>
+        </div>
+
+        <div class="output-container flex-space">
+          <div>
+            <p>Jumlah Bajet(RM)</p>
+            <span id="amount"> 0 </span>
+          </div>
+          <div>
+            <p>Belanjaan(RM)</p>
+            <span id="expenditure-value"> 0 </span>
+          </div>
+          <div>
+            <p>Baki(RM)</p>
+            <span id="balance-amount"> 0 </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="list">
+        <h3>Senarai Belanjaan</h3>
+        <div class="list-container" id="list"></div>
+      </div>
+    </div>
+
+    <div class="footer" style="color: white">
+      <p>
+        Terima Kasih Mencuba
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px)">
+          <path fill="url(#a)" d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Z"></path>
+          <path fill="#fff" d="M10.473 4C8.275 4 8 5.824 8 5.824S7.726 4 5.528 4c-2.114 0-2.73 2.222-2.472 3.41C3.736 10.55 8 12.75 8 12.75s4.265-2.2 4.945-5.34c.257-1.188-.36-3.41-2.472-3.41Z"></path>
+          <defs>
+            <linearGradient id="a" x1="8" x2="8" y2="16" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FF6680"></stop>
+              <stop offset="1" stop-color="#E61739"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
